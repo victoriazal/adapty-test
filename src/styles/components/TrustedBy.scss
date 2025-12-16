@@ -1,0 +1,54 @@
+.trusted-by {
+  padding: 60px 20px;
+  background: #f9fafb;
+  
+  &-text {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  &-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    
+    .logo-item {
+      font-size: 18px;
+      font-weight: 600;
+      color: #4b5563;
+      opacity: 1; // Ensure visibility by default
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: visible; // Ensure visibility
+      
+      &:hover {
+        opacity: 1;
+      }
+      
+      .logo-image {
+        max-height: 40px;
+        width: auto;
+        object-fit: contain;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+      }
+      
+      &:hover .logo-image {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+      
+      .logo-text {
+        display: block;
+      }
+    }
+  }
+}
+

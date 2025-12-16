@@ -1,0 +1,193 @@
+.hero {
+  padding: 40px 20px 80px;
+  background: #ffffff;
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  
+  &-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+  }
+  
+  &-left {
+    position: relative;
+    z-index: 2;
+    padding-right: 40px;
+    opacity: 1; // Ensure visibility
+    
+    @media (max-width: 1024px) {
+      padding-right: 0;
+    }
+  }
+  
+  &-right {
+    position: relative;
+    z-index: 1;
+    opacity: 1; // Ensure visibility
+    
+    @media (max-width: 1024px) {
+      order: -1;
+    }
+  }
+  
+  &-ebook-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #7c3aed;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    
+    .ebook-text {
+      opacity: 0.9;
+    }
+    
+    .ebook-title {
+      font-weight: 700;
+    }
+    
+    .ebook-download {
+      opacity: 0.8;
+    }
+    
+    .ebook-arrow {
+      opacity: 0.9;
+    }
+  }
+  
+  &-title {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #3b82f6 0%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
+  }
+  
+  &-subtitle {
+    font-size: 20px;
+    color: #6b7280;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 600px;
+    
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+  
+  &-cta-form {
+    margin-bottom: 60px;
+  }
+  
+  &-email-input {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    max-width: 500px;
+    
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
+    
+    .email-field {
+      flex: 1;
+      padding: 14px 20px;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+      
+      &:focus {
+        outline: none;
+        border-color: #7c3aed;
+      }
+      
+      &::placeholder {
+        color: #9ca3af;
+      }
+    }
+    
+    .btn-start-free {
+      white-space: nowrap;
+      padding: 14px 28px;
+    }
+  }
+  
+  &-demo-link {
+    color: #7c3aed;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  
+  &-dashboard {
+    position: relative;
+    z-index: 1;
+    
+    .dashboard-image {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      display: block;
+      object-fit: cover;
+    }
+  }
+  
+  &-mobile-preview {
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    max-width: 350px;
+    z-index: 10;
+    
+    @media (max-width: 1024px) {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      max-width: 100%;
+      margin: 40px auto 0;
+    }
+    
+    .mobile-preview-image {
+      width: 100%;
+      height: auto;
+      max-height: 350px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      display: block;
+      object-fit: cover;
+    }
+  }
+}
+

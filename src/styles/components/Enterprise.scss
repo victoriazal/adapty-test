@@ -1,0 +1,46 @@
+.enterprise {
+  padding: 100px 20px;
+  
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .enterprise-card {
+    padding: 32px;
+    background: #f9fafb;
+    border-radius: 12px;
+  }
+  
+  .enterprise-category {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+  }
+  
+  .enterprise-items {
+    list-style: none;
+    
+    li {
+      padding: 8px 0;
+      color: #666;
+      position: relative;
+      padding-left: 24px;
+      
+      &::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #7c3aed;
+        font-weight: 700;
+      }
+    }
+  }
+}
+

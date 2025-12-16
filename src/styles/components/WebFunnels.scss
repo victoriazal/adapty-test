@@ -1,0 +1,16 @@
+.web-funnels {
+  padding: 100px 20px;
+  background: #ffffff;
+  
+  &-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
